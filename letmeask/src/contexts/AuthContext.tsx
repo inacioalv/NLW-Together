@@ -23,7 +23,7 @@ export const AuthContext = createContext({} as AuthContextType);
 
 export function AuthContextProvider(props: AuthContextProviderProps) {
 
-    //inicia como undefined || user
+    //inicia como user || undefined
     const [user, setUser] = useState<User>();
 
     //Manter logado
@@ -79,6 +79,8 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
         }
 
     };
+
+   
 
 
     return (
