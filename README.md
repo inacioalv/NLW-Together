@@ -33,7 +33,7 @@ evento oferecido pela [Rocketseat](https://rocketseat.com.br/)
 Realtime Database Regras
 
 {
-  "rules": {
+ *``` "rules": {
     "rooms": {
       ".read": false,
       ".write": "auth != null",
@@ -51,7 +51,7 @@ Realtime Database Regras
       }
     }
   }
-}
+}```
 
 ## 🔖 Layout
 
