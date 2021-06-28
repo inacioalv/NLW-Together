@@ -6,7 +6,6 @@
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-   <a href="#-realtime">Realtime</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
@@ -31,7 +30,7 @@ permitindo que os usuários se autentiquem com o Firebase usando google.
 evento oferecido pela [Rocketseat](https://rocketseat.com.br/)
 
 
-## Realtime Database Regras
+Realtime Database Regras
 
 {
   "rules": {
@@ -61,7 +60,7 @@ Nos link abaixo você encontra o layout do projeto web.Precisa ter uma conta no 
 - [Layout Web](https://www.figma.com/file/L60qDkdlmKREGWuk4sxYmR/Letmeask-(Copy))
 
 
-<img alt="Logo do projeto" src="/letmeask/public/gif.gif" />
+<img alt="Logo do projeto" src="/letmeask/public/img/gif.gif" />
 
 
 ## :joystick: How to Use
@@ -73,7 +72,7 @@ To run the application you'll need:
 * [Node](https://nodejs.org/)
 * [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/)
 * Clone the repository:
-  * ```$ git clone https://github.com/inacioalv/NLW-5.git ```
+  * ```$ git clone https://github.com/inacioalv/NLW-Together.git ```
 
 
 Now go to project folder and run:
