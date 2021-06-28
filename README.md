@@ -6,6 +6,7 @@
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#-realtime">Realtime</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
@@ -30,7 +31,28 @@ permitindo que os usuários se autentiquem com o Firebase usando google.
 evento oferecido pela [Rocketseat](https://rocketseat.com.br/)
 
 
+## Realtime Database Regras
 
+{
+  "rules": {
+    "rooms": {
+      ".read": false,
+      ".write": "auth != null",
+      "$roomId": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() || data.child('authorId').val() == auth.id)",
+        "questions": {
+          ".read": true,
+          ".write": "auth != null && (!data.exists() || data.parent().child('authorId').val() == auth.id)",
+          "likes": {
+            ".read": true,
+            ".write": "auth != null && (!data.exists() || data.child('authorId').val() == auth.id)",  
+          }
+        }
+      }
+    }
+  }
+}
 
 ## 🔖 Layout
 
@@ -39,7 +61,7 @@ Nos link abaixo você encontra o layout do projeto web.Precisa ter uma conta no 
 - [Layout Web](https://www.figma.com/file/L60qDkdlmKREGWuk4sxYmR/Letmeask-(Copy))
 
 
-<img alt="Logo do projeto" src="/public/gif.gif" />
+<img alt="Logo do projeto" src="/letmeask/public/gif.gif" />
 
 
 ## :joystick: How to Use
