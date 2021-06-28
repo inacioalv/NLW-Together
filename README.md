@@ -49,14 +49,14 @@ Nos link abaixo você encontra o layout do projeto web.Precisa ter uma conta no 
       ".read": false,<br/>
       ".write": "auth != null",<br/>
       "$roomId": {<br/>
-        ".read": true,
-        ".write": "auth != null && (!data.exists() || data.child('authorId').val() == auth.id)",
-        "questions": {
-          ".read": true,
-          ".write": "auth != null && (!data.exists() || data.parent().child('authorId').val() == auth.id)",
-          "likes": {
-            ".read": true,
-            ".write": "auth != null && (!data.exists() || data.child('authorId').val() == auth.id)",  
+        ".read": true,<br/>
+        ".write": "auth != null && (!data.exists() || data.child('authorId').val() == auth.id)",<br/>
+        "questions": {<br/>
+          ".read": true,<br/>
+          ".write": "auth != null && (!data.exists() || data.parent().child('authorId').val() == auth.id)",<br/>
+          "likes": {<br/>
+            ".read": true,<br/>
+            ".write": "auth != null && (!data.exists() || data.child('authorId').val() == auth.id)",  <br/>
           }
         }
       }
