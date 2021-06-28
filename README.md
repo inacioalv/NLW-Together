@@ -30,14 +30,25 @@ permitindo que os usuários se autentiquem com o Firebase usando google.
 evento oferecido pela [Rocketseat](https://rocketseat.com.br/)
 
 
-Realtime Database Regras
+## 🔖 Layout
+
+Nos link abaixo você encontra o layout do projeto web.Precisa ter uma conta no [Figma](http://figma.com/) para acessá-lo.
+
+- [Layout Web](https://www.figma.com/file/L60qDkdlmKREGWuk4sxYmR/Letmeask-(Copy))
+
+
+<img alt="Logo do projeto" src="/letmeask/public/img/gif.gif" />
+
+
+## Realtime Database Regras
 
 {
- *``` "rules": {
-    "rooms": {
-      ".read": false,
-      ".write": "auth != null",
-      "$roomId": {
+ 
+ "rules": {<br/>
+    "rooms": {<br/>
+      ".read": false,<br/>
+      ".write": "auth != null",<br/>
+      "$roomId": {<br/>
         ".read": true,
         ".write": "auth != null && (!data.exists() || data.child('authorId').val() == auth.id)",
         "questions": {
@@ -51,16 +62,8 @@ Realtime Database Regras
       }
     }
   }
-}```
+}
 
-## 🔖 Layout
-
-Nos link abaixo você encontra o layout do projeto web.Precisa ter uma conta no [Figma](http://figma.com/) para acessá-lo.
-
-- [Layout Web](https://www.figma.com/file/L60qDkdlmKREGWuk4sxYmR/Letmeask-(Copy))
-
-
-<img alt="Logo do projeto" src="/letmeask/public/img/gif.gif" />
 
 
 ## :joystick: How to Use
