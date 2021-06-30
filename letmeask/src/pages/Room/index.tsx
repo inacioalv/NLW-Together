@@ -20,7 +20,7 @@ export function Room() {
 
     const history = useHistory()
 
-    const { user} = useAuth();
+    const { user,singout} = useAuth();
 
     const params = useParams<RoomParams>();
 
@@ -71,10 +71,9 @@ export function Room() {
     }
 
     async function signOut() {
-        await await database.ref(`rooms/${roomId}`).update({
-            endedAt: new Date(),
-        });
-    
+       if(user){
+           await singout();   
+       }
 
        history.push('/');
     }
