@@ -37,7 +37,7 @@ Nos link abaixo você encontra o layout do projeto web.Precisa ter uma conta no 
 - [Layout Web](https://www.figma.com/file/L60qDkdlmKREGWuk4sxYmR/Letmeask-(Copy))
 
 
-<img alt="Logo do projeto" src="/letmeask/public/img/gif.gif" />
+<img alt="Logo do projeto" src="/letmeask/public/img/letmeask.gif" />
 
 
 ## Realtime Database Regras
