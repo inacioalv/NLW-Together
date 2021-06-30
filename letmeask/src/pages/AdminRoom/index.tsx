@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom'
+import { useRoom } from '../../hoocks/useRoom';
+import { database } from '../../service/firebase';
+
+
 import { Button } from '../../components/Button'
 import { RoomCode } from '../../components/RoomCode'
 import { Questions } from '../../components/Question'
-import { useRoom } from '../../hoocks/useRoom';
-
-import Modal from 'react-modal';
+import {OpenModal} from '../../components/Modal'
 
 import logoImg from '../../assets/images/logo.svg'
 import deleteImg from '../../assets/images/delete.svg'
@@ -14,7 +16,6 @@ import answerImg from '../../assets/images/answer.svg'
 import close from '../../assets/images/close.svg'
 
 import './styles.scss'
-import { database } from '../../service/firebase';
 
 
 type RoomParams = {
@@ -118,7 +119,7 @@ export function AdminRoom() {
                                     </>
                                 )}
 
-                                <Modal
+                                <OpenModal
                                     isOpen={modalIsOpen}
                                     onAfterOpen={afterOpenModal}
                                     onRequestClose={closeModal}
@@ -163,7 +164,7 @@ export function AdminRoom() {
                                             </Button>
                                         </div>
                                     </div>
-                                </Modal>
+                                </OpenModal>
 
                                 <button onClick={openModal}>
                                     <img src={deleteImg} alt="Remover pergunta" />
