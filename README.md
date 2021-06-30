@@ -25,7 +25,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Togethe é um aplicativo web que possibilita o usuário possa realizar perguntas,
 a pergunta que tiver maior quantidade de like será respondida pelo administrador.
-Objetivo desee NLW e mostrar o uso de autenticar usando o login do Google com typeScript,
+Essa versão foi adicionado o estilo dark e modal na exclusão da pergunta.
+Objetivo desse NLW e mostrar o uso de autenticar usando o login do Google com typeScript,
 permitindo que os usuários se autentiquem com o Firebase usando google. 
 evento oferecido pela [Rocketseat](https://rocketseat.com.br/)
 
@@ -37,7 +38,7 @@ Nos link abaixo você encontra o layout do projeto web.Precisa ter uma conta no 
 - [Layout Web](https://www.figma.com/file/L60qDkdlmKREGWuk4sxYmR/Letmeask-(Copy))
 
 
-<img alt="Logo do projeto" src="/letmeask/public/img/gif.gif" />
+<img alt="Logo do projeto" src="/letmeask/public/img/letmeask.gif" />
 
 
 ## Realtime Database Regras
