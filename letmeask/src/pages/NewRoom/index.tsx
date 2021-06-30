@@ -2,11 +2,11 @@ import { FormEvent,useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import illustrationImg from '../../assets/images/illustration.svg'
 import logo from '../../assets/images/logo.svg'
-import '../../styles/auth.scss'
 import { Button } from '../../components/Button'
 import { database } from '../../service/firebase'
 import { useAuth } from '../../hoocks/useAuth'
 
+import '../Home/styles.scss'
 
 export function NewRoom() {
     
@@ -23,7 +23,7 @@ export function NewRoom() {
         if(newRoom.trim() === ''){
             return;
         }
-        
+
         //no db vai ter uma separação rooms para incluir dados
         const roomRef = database.ref('rooms');
 

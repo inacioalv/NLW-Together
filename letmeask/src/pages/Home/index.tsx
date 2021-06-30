@@ -2,12 +2,12 @@ import { useHistory } from 'react-router-dom'
 import illustrationImg from '../../assets/images/illustration.svg'
 import logo from '../../assets/images/logo.svg'
 import googleIconImg from '../../assets/images/google-icon.svg'
-import '../../styles/auth.scss'
 import { Button } from '../../components/Button'
 import { useAuth } from '../../hoocks/useAuth'
 import { FormEvent, useState } from 'react'
 import { database } from '../../service/firebase'
 
+import './styles.scss'
 
 export function Home() {
 

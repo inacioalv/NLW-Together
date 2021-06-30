@@ -1,14 +1,14 @@
 import { FormEvent, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 import logoImg from '../../assets/images/logo.svg'
 import { Button } from '../../components/Button'
 import { RoomCode } from '../../components/RoomCode'
 import { useAuth } from '../../hoocks/useAuth'
 import { database } from '../../service/firebase'
 import { Questions } from '../../components/Question'
-import './room.scss'
 import { useRoom } from '../../hoocks/useRoom';
 
+import './styles.scss'
 
 type RoomParams = {
     id: string
@@ -18,13 +18,17 @@ export function Room() {
 
     const [newQuestion, setNewQuestion] = useState('');
 
-    const { user } = useAuth();
+    const history = useHistory()
+
+    const { user} = useAuth();
 
     const params = useParams<RoomParams>();
 
     const roomId = params.id;
 
     const { questions, title } = useRoom(roomId);
+
+    
 
 
     async function handleSendQuestion(event: FormEvent) {
@@ -66,12 +70,24 @@ export function Room() {
 
     }
 
+    async function signOut() {
+        await await database.ref(`rooms/${roomId}`).update({
+            endedAt: new Date(),
+        });
+    
+
+       history.push('/');
+    }
+
     return (
         <div id="page-room">
             <header>
                 <div className="content">
                     <img src={logoImg} alt="Letmeask" />
+                    <div>
                     <RoomCode code={roomId} />
+                    <Button isOutlined onClick={signOut}  >Encerrar sala</Button>
+                    </div>
                 </div>
             </header>
             <main>

@@ -2,7 +2,7 @@
     height: 50px;
     border-radius: 8px;
     font-weight: 500;
-    background:#835afd;
+    background:#11223E;
     color: #fff;
     padding: 0 32px;
 
@@ -23,6 +23,16 @@
         background: #fff;
         border: 1px solid #835afd;
         color: #835afd;
+    }
+
+    &.colorGray{
+        background-color: #B5B5B5;
+        color:rgb(110, 109, 109);
+
+    }
+
+    &.colorRed{
+        background-color: #FF3030;
     }
 
     &:not(:disabled):hover{

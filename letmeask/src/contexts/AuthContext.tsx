@@ -11,6 +11,7 @@ type User = {
 type AuthContextType = {
     user: User | undefined;
     singnInWinthGoogle: () => Promise<void>;
+    singout: () => Promise<void>;
 }
 
 type AuthContextProviderProps = {
@@ -80,11 +81,19 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
 
     };
 
-   
+    async function singout(){
+        await firebase.auth().signOut().then(()=>{
+            alert('deslogado')
+
+        }).catch(()=>{
+            console.log('error when exiting');
+            
+        })
+    }
 
 
     return (
-        <AuthContext.Provider value={{ user, singnInWinthGoogle }}>
+        <AuthContext.Provider value={{ user, singnInWinthGoogle,singout }}>
             {props.children}
         </AuthContext.Provider>
     )
